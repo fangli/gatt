@@ -75,6 +75,9 @@ type Device interface {
 	// Connect connects to a remote peripheral.
 	Connect(p Peripheral)
 
+	// Stop change state poweredOff and close device (Only linux)
+	Stop() error
+
 	// CancelConnection disconnects a remote peripheral.
 	CancelConnection(p Peripheral)
 
